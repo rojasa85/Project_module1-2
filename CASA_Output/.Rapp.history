@@ -1,0 +1,135 @@
+t_test<-data.frame()
+head(long_t1)
+rbind(t_test,long_t1)
+wide.t1<-spread(long_t1,"casa_measure","casa_value")
+long_t1 <- gather(t1,#
+		"casa_measure",#
+		"casa_value",#
+		vcl,#
+		vap,#
+		vsl,#
+		lin,#
+		wob,#
+		prog,#
+		bcf#
+		)
+wide.t1<-spread(long_t1,casa_measure,casa_value)
+?spread
+bcf)
+wide.t1<-spread(long_t1,vcl,#
+		vap,#
+		vsl,#
+		lin,#
+		wob,#
+		prog,#
+		bcf)
+wide.t1<-spread(long_t1,value)
+wide.t1<-spread(long_t1,casa_measure)
+long_t1 <- gather(t1,
+wide.t1<-spread(long_t1,casa_measure)
+wide.t1<-spread(long_t1,casa_measure)
+wide.t1<-spread(long_t1,casa_measure)
+long_t1 <- gather(t1,#
+		"casa_measure",#
+		"casa_value",#
+		vcl,#
+		vap,#
+		vsl,#
+		lin,#
+		wob,#
+		prog,#
+		bcf#
+		)
+wide.t1<-spread(long_t1,casa_measure)
+require(lattice)#
+#
+data(barley)#
+str(barley)
+long_barley <- gather(#
+	barley,#
+	"measurement",#
+	"value",#
+	yield#
+)#
+#
+head(long_barley)
+wide.t1<-spread(long_t1,video,value)
+wide.t1<-spread(long_t1,video,casa_value)
+t1<-mutate(t1, video = substr(list.files(path=".")[1],1,9))
+t1
+t_test<-data.frame()
+rbind(t_test,t1)
+i=1
+file_name<-list.files(path=".")[i]
+t<-read.table(file=file_name,#
+                h=F,#
+                nrow = length( readLines( file=file_name ) ) -1 )
+file_name<-list.files(path=".")[i]#
+    t<-read.table(file=file_name,#
+                h=F,#
+                nrow = length( readLines(file_name ) ) -1 )
+morpho <- read.table(file.choose(),h=T)#
+quali <- read.table(file.choose(),h=T)
+data(USArrests)#
+#
+str(USArrests)
+usa<-cbind("state"= row.names(USArrests), USArrests)#
+#
+long_arrests<-gather(usa,#
+	"crime",#
+	"arrests",#
+	Murder:Rape#
+)#
+head(long_arrests)
+separate_iris <- separate(long_iris,#
+	Measurement,#
+	c("Organ", "Dimension")#
+)
+str(iris)
+long_iris <- gather(iris,#
+		"Measurement",#
+		"Value",#
+		Sepal.Length,#
+		Sepal.Width,#
+		Petal.Length,#
+		Petal.Width#
+		)#
+#
+grid.table(head(long_iris))#
+str(long_iris)
+separate_iris <- separate(long_iris,#
+	Measurement,#
+	c("Organ", "Dimension")#
+)#
+#
+head(separate_iris)#
+head(long_iris)
+CO2_by_Plant_Type_Treatment <- group_by(CO2,
+Plant,
+Type,
+Treatment)
+CO2_by_Plant_Type_Treatment
+separate_iris <- separate(long_iris,#
+	Measurement,#
+	c("Organ", "Dimension")#
+)#
+#
+head(separate_iris)#
+head(long_iris)#
+#
+group_iris<- group_by(separate_iris, Species, Organ, Dimension)
+summary_iris <- dplyr:::summarise(group_iris,#
+					average_values = mean(Value)		#
+)
+print(summary_iris)
+data(barley)
+str(barley)
+long_barley <- gather(#
+	barley,#
+	"measurement",#
+	"value",#
+	yield#
+)
+head(long_barley)
+wide_barley <- spread(long_barley, variety, value )
+str(wide_barley)
