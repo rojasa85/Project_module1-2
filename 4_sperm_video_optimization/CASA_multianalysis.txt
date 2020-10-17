@@ -1,0 +1,29 @@
+Folder = getDirectory("/Volumes/Backup3/First_videos");
+
+images = getFileList(Folder);
+
+
+for (i=0; i<images.length; i++) {
+
+   inputPath = Folder + images[i];
+ 
+run("AVI...", "select=inputPath first=51 last=76”);
+name = getTitle;
+txt_name =replace(name, ".avi",".txt");
+run("8-bit");
+setAutoThreshold("Default dark");
+//run("Threshold...");
+setThreshold(0, 110);
+setThreshold(0, 110);
+setOption("BlackBackground", false);
+run("Convert to Mask", "method=Default background=Dark black");
+run("CASA ", "a,=34 b,=76 c,=16.000000000 d,=13.00000000 e,=25.000 f,=30.000000000 g,=35.000000000 h,=30.00000 i,=0 j,=0.000000000 k,=0.000000000 l,=0.000000000 m,=200.000000000 n,=200.000000000 o,=200.000000000 p,=200.000000000 q,=25.000000000 r,=729.000000000 s,=0 t,=0 q,=0”);
+close();
+close();
+saveAs("Results", "/Users/minoru/University_of_Neuchatel/Hasli_2015/Sperm_video_optimization"+txt_name);
+run ("Close");
+
+}
+
+
+setBatchMode(false);
